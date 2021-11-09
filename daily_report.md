@@ -1,0 +1,3 @@
+## Day 1:
+Studied till page 28. (had read most of them previously. re-read them anyway)
+Did exercises 1-1 to 1-10 (page 20) -- mostly easy stuff now...
