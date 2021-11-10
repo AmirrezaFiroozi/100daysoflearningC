@@ -1,0 +1,5 @@
+Logical bug: Any sequence of chars between spaces tabs or blanks is a word
+maybe the blank is not one of the listed ' ' or '\t' or '\n' but something else?
+@w34 ^3#$ are not words as to speak? 
+or camelCase or CompundStuff? IDK really
+I couldn't think of anything so this has to do
