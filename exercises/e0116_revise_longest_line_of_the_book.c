@@ -5,7 +5,7 @@
  *  I didn't understand this question at the beginning which is why I googled its meaning... (not the code but the algorithm... so...)
  *  Also since I needed to exceed the MAXLINE limit, I reduced to just 100 (from 1000)
  *  Update:
- *      Reading pages 28-30 again I understood the exercise to some extend :)
+ *      Reading pages 28-30 again I understood the exercise to some extent :)
  */
 
 // renamed getline to getlinee to avoid name confilict
@@ -24,9 +24,11 @@ int main()
 
     max = 0;
     while ((len = getlinee(line, MAXLINE)) > 0){
-        if (line[len-1] != '\n' && line[len-1] != EOF)
+        if (line[len-1] != '\n' && line[len-1] != EOF){
             while ((c=getchar())!=EOF && c!='\n')
                 ++len;
+            if (c=='\n') ++len; /* if encountered '\n' at the end of the line count it! */
+        }
         if (len > max){
             max = len;
             copy(longest, line);

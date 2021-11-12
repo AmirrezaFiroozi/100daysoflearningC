@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 #define MAXLENGTH 500
-#define ARRAYSIZE (MAXLENGTH+1)
 
 int getLine(char buffer[], int limit);
 /* print lines longer than 80 chars */
 int main()
 {
-    char line[ARRAYSIZE];
+    char line[MAXLENGTH];
     int len;
     while ((len=getLine(line, MAXLENGTH)) > 0)
         if (len > 80)
