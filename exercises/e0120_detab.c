@@ -8,10 +8,11 @@
 int main()
 {
     int c, i;
-    bool foundTab = false;
     int pos; /* keep track of position */
+
     //show position of tab stops
     //comment this block if you don't need the ruler :)
+/*
     {
         for (i = 0; i < 150; ++i)
             if ((i%TS)==0)
@@ -20,6 +21,7 @@ int main()
                 putchar('-');
         putchar('\n');
     }
+*/
 
         while ((c=getchar())!=EOF){
         if (c == '\t'){
