@@ -16,5 +16,10 @@ Continuing with the exercises.<br />
 ## Day 5:<br />
 Exercises 1-16 to 1-20<br />
 1-20 was quite interesting :)
+## Day 6:<br />
 
+## Day 7:<br />
+Exercise 1-22, (and a rough outline of 1-23)<br />
+Ran into core dump and segment faults :ROFL :XDD<br />
+Lesson: initialise local variables before use!
 
