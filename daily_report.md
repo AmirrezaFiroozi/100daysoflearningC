@@ -21,5 +21,17 @@ Exercises 1-16 to 1-20<br />
 ## Day 7:<br />
 Exercise 1-22, (and a rough outline of 1-23)<br />
 Ran into core dump and segment faults :ROFL :XDD<br />
-Lesson: initialise local variables before use!
+Lesson: initialise local variables before use!<br />
+## Day 8:<br />
+Exercise 1-23 -- Removes the majority of comments (all // comments and the first / * type comment in a line) <br />
+(Can't remove the line below)<br />
+/**** this gets removed */ */ this one remains */ // this one too ***<br />
+// this line gets removed <br />
+/**** this 
+  too
+  gets
+  removed
+*/ ***<br />
+Chapter 2. (page 40)
+
 
