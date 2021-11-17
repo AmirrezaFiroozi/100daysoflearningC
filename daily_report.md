@@ -36,6 +36,9 @@ Chapter 2. (page 40)<br />
 ## Day 9:<br />
 Almost finished chapter 2 (2 pages left)<br />
 improved exercise 1-23<br />
+## Day 10:<br />
+Finished Chapter 2. <br />
+sketched exercise 2-1, (intentionally left exercise 1-24 for later) <br />
 
 
 
