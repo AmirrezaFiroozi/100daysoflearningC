@@ -15,71 +15,74 @@
  */
 
 int getlinee(char str[], int limit);
-void printStrExcludingRange(char str[], int ex_start, int ex_end, int limit);
 void printStr(char str[]);
 int findCommentStart(char str[], int start, int limit);
 int findCommentEnd(char str[], int start, int limit, int type);
 int detectCommentType(char str[], int pos);
-int howmanyCommentStarts(char str[]);
+char* deleteFromStr(char str[], int ex_start, int ex_end, int limit);
+void removeComments(char line[], int len);
 
 int main()
 {
-    // read line
-    // find comment start
-    // find comment end
-    // print line excluding comment_start to comment_end
-    /*
-     * If it looks like this code is unnecessarily verbose,
-     * I had to write it this way to debug easily :|
-     * A quick refactoring would probably solve it and make it concise
-     * but I'm not in the mood now
-     */
-    printf("Testing comments /* inside a quoted string */ this portion should not be deleted\n");
+//    printf("Testing comments /* inside a quoted string */ this portion should not be deleted\n");
+//    char test[] = "Hello sad World";
+//    printf("%s\n", deleteFromStr(test, 5, 8, 16));
     int len;
     char line[MAXLEN];
+    while ((len=getlinee(line, MAXLEN)) > 0){ // testing in line comment
+        removeComments(line, len);
+        printStr(line);
+    }
+   return 0;
+}
+
+/*
+ * Remove ALL comments from a single line
+ */
+
+void removeComments(char line[], int len)
+{
     int comStart = -1;
     int comEnd = -1;
     int comType = -1;
-    bool dealtWithPreviousComment = true;
-    while ((len=getlinee(line, MAXLEN)) > 0){ // testing in line comment
-        comStart = findCommentStart(line, 0, len);
-        if (comStart != -1){
-            // this line has comment beginning sequence
-            comType = detectCommentType(line, comStart);
-            comEnd = findCommentEnd(line, comStart, len, comType);
-            printStrExcludingRange(line, comStart, comEnd, len);
-            if (comType == 1){
-                // this type of comment is 1 single line comment
+    static bool dealtWithPreviousComment = true;
+
+    comStart = findCommentStart(line, 0, len);
+    if (comStart != -1){
+        // this line has comment beginning sequence
+        comType = detectCommentType(line, comStart);
+        comEnd = findCommentEnd(line, comStart, len, comType);
+        deleteFromStr(line, comStart, comEnd, len);
+        if (comType == 1){
+            // this type of comment is 1 single line comment
+            dealtWithPreviousComment = true;
+        }else if (comType == 2) {
+            /* this type of comment is 2. could be multiline or singleline */
+            if (comEnd == -1)
+                dealtWithPreviousComment = false;
+            else{
+                // dealtWithPreviousComment, check for New Comments
                 dealtWithPreviousComment = true;
-            }else if (comType == 2) {
-                /* this type of comment is 2. could be multiline or singleline */
-                if (comEnd == -1)
-                    dealtWithPreviousComment = false;
-                else{
-                    // To fill!
-                    // comment end in this line. maybe other comment starts here?
-                    // search for comStart start from after the end of the previous comment
-                }
+                removeComments(line, len);
+            }
+        }
+    }else{
+        // this line doesn't have comment beginning sequnece
+        if (! dealtWithPreviousComment){
+            // deal with previous comment
+            // comType always 2?
+            comEnd = findCommentEnd(line, 0, len, 2);
+            deleteFromStr(line, 0, comEnd, len);
+            if (comEnd != -1){
+                dealtWithPreviousComment = true;
+                // check for more comments
+                removeComments(line, len);
             }
         }else{
-            // this line doesn't have comment beginning sequnece
-            if (! dealtWithPreviousComment){
-                // deal with previous comment
-                // comType always 2?
-                comEnd = findCommentEnd(line, 0, len, comType);
-                printStrExcludingRange(line, 0, comEnd, len);
-                if (comEnd != -1)
-                    dealtWithPreviousComment = true;
-            }else{
-                // Normal line. not part of any comment
-                printStr(line);
-            }
-
+            // Normal line. not part of any comment
+            return;
         }
-
     }
-
-    return 0;
 }
 
 int getlinee(char str[], int limit)
@@ -102,27 +105,36 @@ int getlinee(char str[], int limit)
 void printStr(char str[])
 {
     int bh;
-    for (bh = 0; str[bh]!='\0'; ++bh)
+    for (bh = 0; str[bh]!='\0'; ++bh){
+        /* Ignore multiple '\n's */
+        if (bh > 0 && str[bh] == '\n' && str[bh-1] == '\n')
+            continue;
         putchar(str[bh]);
+    }
 }
-/* Print str from str[0] to str[limit] exclude str[ex_start] to str[ex_end]
- * ex_start <= ex_end <= limit
- *
+/*
+ * delete str[ex_start] to str[ex_end]; glue the string back together
+ * (string literal is not allowed)
  * ex_end == -1 --> ( delete from ex_start to limit; print the rest)
  * ex_start == -1 --> (delete from 0 to ex_end; print the rest)
- * 
  */
-void printStrExcludingRange(char str[], int ex_start, int ex_end, int limit)
+char* deleteFromStr(char str[], int ex_start, int ex_end, int limit)
 {
+    char tmp[limit];
     int bh;
-    char c;
+    int i;
     if (ex_end == -1)
         ex_end = limit;
-    for (bh = 0; bh < limit && (c=str[bh])!='\0'; ++bh){
+    /* copy str[] to tmp[] */
+    for (bh = 0; bh < limit && (tmp[bh]=str[bh])!='\0'; ++bh);
+    /* copy tmp[] back to str[] ignoring tmp[ex_start] to tmp[ex_end] */
+    for (bh = 0, i = 0; bh < limit && tmp[bh]!='\0'; ++bh){
         if (bh >= ex_start && bh <= ex_end)
             continue;
-        putchar(c);
+        str[i++] = tmp[bh];
     }
+    str[i] = '\0';
+    return str;
 }
 
 /*
@@ -140,8 +152,12 @@ int findCommentStart(char str[], int start, int limit)
         if (c == '\"')
             ++dquotecount;
         else if (c == '/'){
-            if ((dquotecount % 2) == 0 && (str[bh+1] == '/' || str[bh+1] == '*'))
+            if ((dquotecount % 2) == 0 && (str[bh+1] == '/' || str[bh+1] == '*')){
+                /* If there is a newline before a comment report '\n' s position as the start of the comment to get rid of the extra '\n' */
+                if (bh > 0 && str[bh-1]=='\n')
+                    return bh-1;
                 break;
+            }
         }
     }
     if (str[bh] != '/')
@@ -188,4 +204,3 @@ int detectCommentType(char str[], int pos)
 
     return type;
 }
-

@@ -32,6 +32,10 @@ Exercise 1-23 -- Removes the majority of comments (all // comments and the first
   gets
   removed
 */ ***<br />
-Chapter 2. (page 40)
+Chapter 2. (page 40)<br />
+## Day 9:<br />
+Almost finished chapter 2 (2 pages left)<br />
+improved exercise 1-23<br />
+
 
 
