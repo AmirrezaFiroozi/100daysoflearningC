@@ -8,8 +8,7 @@ Exercises 1-11 to 1-15
 ## Day 3:<br />
 spent the day trying to figure out why I think getlinee function in 1-16 causes overflow but maybe it doesn't
 used gdb tried old school paper can I be right?<br />
-Yeah, to put it in a nutshell I spent a lot of time and got nothing done :| Tomorrow is a new day, right? <br />
-## Day 4:<br />
+Yeah, to put it in a nutshell I spent a lot of time and got nothing done :| Tomorrow is a new day, right? <br /> ## Day 4:<br />
 11:02am, wrote down getlinee function on a piece of paper and debugged it manually! It is a real piece of art! genious :) I had the Aha moment :)<br />
 Continuing with the exercises.<br />
 
@@ -39,6 +38,8 @@ improved exercise 1-23<br />
 ## Day 10:<br />
 Finished Chapter 2. <br />
 sketched exercise 2-1, (intentionally left exercise 1-24 for later) <br />
+## Day 11:<br />
+Busy day :( only one very minor exercise done 2-2
 
 
 
