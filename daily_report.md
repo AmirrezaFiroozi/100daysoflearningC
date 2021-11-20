@@ -39,7 +39,10 @@ improved exercise 1-23<br />
 Finished Chapter 2. <br />
 sketched exercise 2-1, (intentionally left exercise 1-24 for later) <br />
 ## Day 11:<br />
-Busy day :( only one very minor exercise done 2-2
+Busy day :( only one very minor exercise done 2-2<br />
+## Day 13:<br />
+exercises 2-3 to 2-5, began 2-6
+
 
 
 
