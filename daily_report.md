@@ -41,7 +41,10 @@ sketched exercise 2-1, (intentionally left exercise 1-24 for later) <br />
 ## Day 11:<br />
 Busy day :( only one very minor exercise done 2-2<br />
 ## Day 13:<br />
-exercises 2-3 to 2-5, began 2-6
+exercises 2-3 to 2-5, began 2-6<br />
+## Day 14:<br />
+Exercises 2-6 to 2-10<br />
+Studied chapter 3 (up to page 63 (out of 66))
 
 
 
