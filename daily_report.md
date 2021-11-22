@@ -44,7 +44,10 @@ Busy day :( only one very minor exercise done 2-2<br />
 exercises 2-3 to 2-5, began 2-6<br />
 ## Day 14:<br />
 Exercises 2-6 to 2-10<br />
-Studied chapter 3 (up to page 63 (out of 66))
+Studied chapter 3 (up to page 63 (out of 66))<br />
+## Day 15:<br />
+Finished studying chapter 3<br />
+Struggled unsuccessfully to do exercise 3-1 :(
 
 
 
