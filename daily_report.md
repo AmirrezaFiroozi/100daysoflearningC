@@ -47,7 +47,10 @@ Exercises 2-6 to 2-10<br />
 Studied chapter 3 (up to page 63 (out of 66))<br />
 ## Day 15:<br />
 Finished studying chapter 3<br />
-Struggled unsuccessfully to do exercise 3-1 :(
+Struggled unsuccessfully to do exercise 3-1 :(<br />
+## Day 16:<br />
+After trying a bunch of things to solve 3-1, I just moved the test inside while :(<br />
+I don't think I've solved it; but, I could not do it any other way :shrug :sad
 
 
 
