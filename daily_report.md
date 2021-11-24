@@ -50,8 +50,7 @@ Finished studying chapter 3<br />
 Struggled unsuccessfully to do exercise 3-1 :(<br />
 ## Day 16:<br />
 After trying a bunch of things to solve 3-1, I just moved the test inside while :(<br />
-I don't think I've solved it; but, I could not do it any other way :shrug :sad
-
-
-
-
+I don't think I've solved it; but, I could not do it any other way :shrug :sad<br />
+## Day 17:<br />
+Exercises 3-2 and 3-3. Quite fun actually :)<br />
+used gdb to debug the exercises :)
