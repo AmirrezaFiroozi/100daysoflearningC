@@ -53,4 +53,6 @@ After trying a bunch of things to solve 3-1, I just moved the test inside while 
 I don't think I've solved it; but, I could not do it any other way :shrug :sad<br />
 ## Day 17:<br />
 Exercises 3-2 and 3-3. Quite fun actually :)<br />
-used gdb to debug the exercises :)
+used gdb to debug the exercises :)<br />
+## Day 18:<br />
+Watched a tutorial on using libcurl<br />
