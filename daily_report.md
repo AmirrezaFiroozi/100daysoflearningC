@@ -59,3 +59,5 @@ Watched a tutorial on using libcurl<br />
 ## Day 20:<br />
 Studied chapter 4 up to page 71<br />
 Going to watch a Ken Thompson interview with Brian Kernighan... Yes yes I know I've been lazy recently :( that will change...<br />
+## Day 21:<br />
+Chapter 4 - page 74
