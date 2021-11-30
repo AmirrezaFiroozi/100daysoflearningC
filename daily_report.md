@@ -64,4 +64,6 @@ Chapter 4 - page 74<br />
 ## Day 22:<br />
 Chapter 4 - page 89 (of 92)<br />
 Today was quite informational and enjoyable :)))
-I will be doing exercises in the following days
+I will be doing exercises in the following days<br />
+## Day 23:<br />
+Exercises 3-4 3-5 + one misc exercise. itob was quite fun :)<br />
