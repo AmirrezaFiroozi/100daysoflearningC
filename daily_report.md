@@ -71,3 +71,5 @@ Exercises 3-4 3-5 + one misc exercise. itob was quite fun :)<br />
 Chapter 4 studying is complete; but, exercises remain to be done.<br />
 Exercises 3-6, 4-1<br />
 Discovered EdX<br />
+## Day 25:<br />
+Exercise 4-2
