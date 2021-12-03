@@ -72,4 +72,6 @@ Chapter 4 studying is complete; but, exercises remain to be done.<br />
 Exercises 3-6, 4-1<br />
 Discovered EdX<br />
 ## Day 25:<br />
-Exercise 4-2
+Exercise 4-2<br />
+## Day 26:<br />
+Exercises 4-3 4-4<br />
