@@ -78,3 +78,6 @@ Exercises 4-3 4-4<br />
 ## Day 27:<br />
 Studied Chapter 5 up to page 104.<br />
 CS50 - lecture 02<br />
+## Day 28:<br />
+Implemented SelectionSort and BubbleSort. Still struggling with Merge Sort...<br />
+CS50 - lecture 03<br />
