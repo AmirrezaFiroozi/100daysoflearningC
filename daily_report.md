@@ -81,3 +81,6 @@ CS50 - lecture 02<br />
 ## Day 28:<br />
 Implemented SelectionSort and BubbleSort. Still struggling with Merge Sort...<br />
 CS50 - lecture 03<br />
+## Day 29:<br />
+Chapter 5 -- page 107<br />
+CS50 - lecture 04 (2h 47m)<br />
