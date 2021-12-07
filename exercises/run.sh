@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gcc "$@" && ./a.out 
+gcc -g "$@" && ./a.out 

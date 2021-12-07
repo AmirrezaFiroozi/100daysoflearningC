@@ -84,3 +84,6 @@ CS50 - lecture 03<br />
 ## Day 29:<br />
 Chapter 5 -- page 107<br />
 CS50 - lecture 04 (2h 47m)<br />
+## Day 30:<br />
+Exercises 4-5, 4-12, 4-13, 4-14<br />
+
