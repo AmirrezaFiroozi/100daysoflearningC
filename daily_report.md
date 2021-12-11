@@ -89,4 +89,6 @@ Exercises 4-5, 4-12, 4-13, 4-14<br />
 ## Day 31:<br />
 Chapter 5 -- reviewed some pages plus reached page 112<br />
 CS50 - lecture 05 (2h 26m)<br />
+## Day 34:<br />
+Watched libcurl video tutorials<br />
 
